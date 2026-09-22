@@ -1,5 +1,5 @@
 def main():
-    print("Calculator (+, -, *)")
+    print("Calculator (+, -, *, /)")
     try:
         num1 = float(input("First number: "))
         op = input("Operator: ")
@@ -11,6 +11,11 @@ def main():
             print(f"Result: {num1 - num2}")
         elif op == '*':
             print(f"Result: {num1 * num2}")
+        elif op == '/':
+            if num2 == 0:
+                print("Error: Division by zero is not allowed.")
+            else:
+                print(f"Result: {num1 / num2}")
         else:
             print("Invalid operator!")
     except ValueError:
